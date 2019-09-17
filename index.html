@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Employee Data Management</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Header area -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron jumbotron-fluid text-center">
+                    <div class="container">
+                      <h1 class="display-4">Employee Data Management</h1>
+                      <p class="lead">A Comprehensive Directory of Employee Billable Hours</p>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <!-- Current Employees area -->
+        <div class="row spacer">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        Current Employees
+                    </div>
+                    <!-- Table -->
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Employee Name</th>
+                                <th scope="col">Role</th>
+                                <th scope="col">Start Date</th>
+                                <th scope="col">Months Worked</th>
+                                <th scope="col">Monthly Rate ($)</th>
+                                <th scope="col">Total Billed ($)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>CEO</td>
+                                <td>01/01/2019</td>
+                                <td>8</td>
+                                <td>100000</td>
+                                <td>800000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- Form area -->
+        <div class="row spacer">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        Add Employees
+                    </div>
+                    <!-- Form -->
+                    <form>
+                        <div class="form-group formspacer">
+                            <label for="employee-name">Employee Name</label>
+                            <input type="text" id="employee-name" class='form-control' placeholder="Jane Doe">
+                            <label for="employee-role">Role</label>
+                            <input type="text" id="employee-role" class='form-control' placeholder="CEO">
+                            <label for="employee-start">Start Date (mm/dd/yyyy)</label>
+                            <input type="date" id="employee-start" class='form-control'>
+                            <label for="employee-rate">Monthly Rate ($)</label>
+                            <input type="number" id="employee-rate" class='form-control' placeholder="100000">
+                            <button type="button" class="btn btn-dark btnspacer">Add Employee</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
