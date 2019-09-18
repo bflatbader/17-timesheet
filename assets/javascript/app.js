@@ -43,11 +43,24 @@ var sv = snapshot.val();
 // Console.loging the last user's data
 console.log(sv.empName, sv.empRole, sv.empStart, sv.empRate);
 
+empTable = `
+        <tr>
+        <td>${sv.empName}</td>
+        <td>${sv.empRole}</td>
+        <td>${sv.empStart}</td>
+        <td>8</td>
+        <td>${sv.empRate}</td>
+        <td>800000</td>
+        </tr>
+`;
+
+$('#employeeTable').append(empTable);
+
 // Change the HTML to reflect
-$("#employee-name").text(sv.empName);
-$("#employee-role").text(sv.empRole);
-$("#employee-start").text(sv.empStart);
-$("#employee-name").text(sv.empRate);
+//$("#employee-name").text(sv.empName);
+//$("#employee-role").text(sv.empRole);
+//$("#employee-start").text(sv.empStart);
+//$("#employee-name").text(sv.empRate);
 
 // Handle the errors
 }, function(errorObject) {
