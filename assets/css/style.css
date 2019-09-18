@@ -1,3 +1,12 @@
+body {
+    background-color: #EFEAE8;
+}
+
+.jumbotron {
+    background-color: #444054;
+    color: #fff;
+}
+
 .spacer {
     padding-top: 20px;
 }
@@ -7,6 +16,19 @@
     line-height: 30px;
 }
 
+.card-header {
+    background-color: #BEBBBB;
+}
+
 .btnspacer {
     margin-top: 20px;
+}
+
+.btn {
+    background-color: #DB8A74;
+    border: 0px;
+}
+
+.card {
+    background-color: #EFEFEF;
 }
