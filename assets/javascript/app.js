@@ -34,6 +34,12 @@ database.ref().push({
     dateAdded: firebase.database.ServerValue.TIMESTAMP
 });
     console.log(empName, empRole, empStart, empRate);
+
+    // Clear form
+    $("#employee-name").val("");
+    $("#employee-role").val("");
+    $("#employee-start").val("");
+    $("#employee-rate").val("");
 });
 
 database.ref().on("child_added", function(snapshot) {
@@ -43,24 +49,23 @@ var sv = snapshot.val();
 // Console.loging the last user's data
 console.log(sv.empName, sv.empRole, sv.empStart, sv.empRate);
 
+// Calculate Months Worked and Total Billed
+monthsWorked = moment().diff(sv.empStart, "months");
+totalBilled = monthsWorked * sv.empRate;
+
+// Change the HTML to reflect
 empTable = `
         <tr>
         <td>${sv.empName}</td>
         <td>${sv.empRole}</td>
         <td>${sv.empStart}</td>
-        <td>8</td>
+        <td>${monthsWorked}</td>
         <td>${sv.empRate}</td>
-        <td>800000</td>
+        <td>${totalBilled}</td>
         </tr>
 `;
 
 $('#employeeTable').append(empTable);
-
-// Change the HTML to reflect
-//$("#employee-name").text(sv.empName);
-//$("#employee-role").text(sv.empRole);
-//$("#employee-start").text(sv.empStart);
-//$("#employee-name").text(sv.empRate);
 
 // Handle the errors
 }, function(errorObject) {
